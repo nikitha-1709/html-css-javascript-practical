@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Exp 16 - Write a program using arrow functions</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge js">JavaScript Experiment 16 of 67</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Write a program using arrow functions</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates ES6 arrow syntax, implicit returns, lexical this, and array transformation callbacks.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <div>
+  <div class="control-group">
+    <button class="btn" onclick="demoArrows()">Test Arrow Functions</button>
+  </div>
+  <div id="output16" class="result-box">Output will appear here.</div>
+</div>
+<script>
+function demoArrows() {
+  const add = (a, b) => a + b;
+  const numbers = [1, 2, 3, 4, 5];
+  const doubled = numbers.map(n => n * 2);
+  document.getElementById('output16').innerText = 
+    `Arrow function add(15, 25): ${add(15, 25)}
+` +
+    `Arrow map callback on [1,2,3,4,5]: [${doubled.join(', ')}]`;
+}
+</script>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>js-16.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">// Arrow Function
+const add = (a, b) =&gt; a + b;
+// Arrow with Map
+const doubled = [1, 2, 3].map(n =&gt; n * 2);</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="js-15.html" class="nav-btn">&larr; Previous Exp (15)</a>
+      <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+      <a href="js-17.html" class="nav-btn primary">Next Exp (17) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

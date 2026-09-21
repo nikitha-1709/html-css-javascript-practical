@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML, CSS & JavaScript Practical Assignment</title>
+  <link rel="stylesheet" href="assets/common.css">
+  <style>
+    .dashboard { max-width:1100px; margin:0 auto; padding:40px 20px; }
+    .hero { text-align:center; margin-bottom:32px; }
+    .hero h1 { margin-bottom:10px; }
+    .hero p { color:#64748b; line-height:1.6; }
+    .student { margin:0 0 12px; color:#334155; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+    .category-card { display:block; text-decoration:none; color:inherit; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:24px; box-shadow:0 2px 8px rgba(15,23,42,.06); transition:.2s; }
+    .category-card:hover { transform:translateY(-3px); box-shadow:0 8px 18px rgba(15,23,42,.10); }
+    .category-card h2 { margin:0 0 8px; }
+    .category-card p { color:#64748b; line-height:1.5; }
+    .open { display:inline-block; margin-top:8px; font-weight:700; }
+    .footer { text-align:center; margin-top:34px; color:#64748b; font-size:13px; }
+  </style>
+</head>
+<body>
+  <main class="dashboard">
+    <header class="hero">
+      <h1>HTML, CSS &amp; JavaScript Practical Assignment</h1>
+      <p class="student"><strong>Student Name:</strong> Nikitha K</p>
+      <p>Practical programs completed for the HTML, CSS and JavaScript assignment.</p>
+    </header>
+    <section class="cards" aria-label="Program categories">
+      <a class="category-card" href="html/index.html">
+        <h2>HTML Programs</h2>
+        <p>15 programs covering basic HTML, lists, tables, forms, multimedia, semantic HTML, Bootstrap and portfolio design.</p>
+        <span class="open">View HTML Programs &rarr;</span>
+      </a>
+      <a class="category-card" href="css/index.html">
+        <h2>CSS Programs</h2>
+        <p>75 programs covering selectors, box model, layouts, Flexbox, Grid, responsive design, transitions and animations.</p>
+        <span class="open">View CSS Programs &rarr;</span>
+      </a>
+      <a class="category-card" href="javascript/index.html">
+        <h2>JavaScript Programs</h2>
+        <p>189 programs covering JavaScript basics, DOM, events, forms, browser features, storage and mini projects.</p>
+        <span class="open">View JavaScript Programs &rarr;</span>
+      </a>
+    </section>
+    <footer class="footer">HTML, CSS &amp; JavaScript Practical Assignment</footer>
+  </main>
+</body>
+</html>

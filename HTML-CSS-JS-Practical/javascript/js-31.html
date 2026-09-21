@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Exp 31 - Validate name, email, phone number, and password using JavaScript</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge js">JavaScript Experiment 31 of 67</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Validate name, email, phone number, and password using JavaScript</h1>
+      <p class="lab-desc"><strong>Description:</strong> Comprehensive regex validation for alphabetic name, email syntax, 10-digit phone, and secure password.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <form onsubmit="validateAll31(event)" style="max-width:440px; background:#fff; padding:16px; border:1px solid #cbd5e1; border-radius:8px;">
+  <input type="text" id="valName" placeholder="Name (alphabets only)" class="input-field" style="width:100%; margin-bottom:8px;">
+  <input type="text" id="valEmail" placeholder="Email address" class="input-field" style="width:100%; margin-bottom:8px;">
+  <input type="text" id="valPhone" placeholder="10-Digit Mobile Number" class="input-field" style="width:100%; margin-bottom:8px;">
+  <input type="password" id="valPass" placeholder="Password (min 6 chars)" class="input-field" style="width:100%; margin-bottom:12px;">
+  <button type="submit" class="btn" style="width:100%;">Run Validation Check</button>
+  <div id="out31" class="result-box" style="margin-top:12px;">Awaiting submission.</div>
+</form>
+<script>
+function validateAll31(e) {
+  e.preventDefault();
+  const n = document.getElementById('valName').value.trim();
+  const em = document.getElementById('valEmail').value.trim();
+  const ph = document.getElementById('valPhone').value.trim();
+  const pw = document.getElementById('valPass').value;
+  
+  const errors = [];
+  if (!/^[a-zA-Z\s]+$/.test(n)) errors.push('Name must contain only alphabets.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) errors.push('Invalid email address syntax.');
+  if (!/^\d{10}$/.test(ph)) errors.push('Phone must be exactly 10 digits.');
+  if (pw.length < 6) errors.push('Password must be at least 6 characters.');
+  
+  if (errors.length === 0) {
+    document.getElementById('out31').innerHTML = '<span style="color:#16a34a; font-weight:bold;">All 4 fields validated successfully!</span>';
+  } else {
+    document.getElementById('out31').innerHTML = '<span style="color:#dc2626;">' + errors.join('<br>') + '</span>';
+  }
+}
+</script>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>js-31.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">const nameRegex = /^[a-zA-Z ]+$/;
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const phoneRegex = /^\d{10}$/;</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="js-30.html" class="nav-btn">&larr; Previous Exp (30)</a>
+      <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+      <a href="js-32.html" class="nav-btn primary">Next Exp (32) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

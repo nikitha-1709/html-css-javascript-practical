@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Exp 01 - Create a basic HTML webpage using headings, paragraphs, and line breaks</title>
+  <link rel="stylesheet" href="../assets/common.css">
+  <style>
+    /* Scoped Experiment Specific Styles */
+    .demo-wrapper {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab-container">
+    <!-- Top Navigation -->
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge html">HTML Experiment 01 of 15</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create a basic HTML webpage using headings, paragraphs, and line breaks</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates structural hierarchy using heading tags (h1 to h6), paragraph elements (p), horizontal rules (hr), and line breaks (br).</p>
+    </header>
+
+    <!-- Working Implementation & Output Card -->
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-wrapper">
+        
+<div style="background:#fff; padding:20px; border-radius:8px; border:1px solid #cbd5e1;">
+  <h1 style="color:#1e293b; font-size:28px; margin-bottom:8px;">Heading 1: Computer Science Department</h1>
+  <p style="color:#475569; margin-bottom:12px;">This is an introductory paragraph describing the academic department. Welcome to the official practical session.<br>Line breaks allow splitting sentences onto a new line without creating a separate paragraph block.</p>
+  <hr style="margin:16px 0; border:0; border-top:1px solid #e2e8f0;">
+  <h2 style="color:#334155; font-size:22px; margin-bottom:6px;">Heading 2: Core Academic Disciplines</h2>
+  <p style="color:#475569; margin-bottom:10px;">Students study data structures, algorithms, computer networks, and modern web application development.</p>
+  <h3 style="color:#475569; font-size:18px; margin-bottom:6px;">Heading 3: Web Technologies Lab</h3>
+  <h4 style="color:#64748b; font-size:16px; margin-bottom:4px;">Heading 4: HTML5 & Semantic Web</h4>
+  <h5 style="color:#94a3b8; font-size:14px; margin-bottom:4px;">Heading 5: Sub-topic Configuration</h5>
+  <h6 style="color:#cbd5e1; font-size:12px;">Heading 6: Micro Footnote Tag</h6>
+</div>
+
+      </div>
+    </main>
+
+    <!-- Source Code Card -->
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>html-01.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Basic HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Heading 1: Computer Science Department&lt;/h1&gt;
+  &lt;p&gt;This is an introductory paragraph describing the academic department.&lt;br&gt;
+  Line breaks allow splitting sentences onto a new line.&lt;/p&gt;
+  &lt;hr&gt;
+  &lt;h2&gt;Heading 2: Core Academic Disciplines&lt;/h2&gt;
+  &lt;p&gt;Students study data structures, algorithms, and web development.&lt;/p&gt;
+  &lt;h3&gt;Heading 3: Web Technologies Lab&lt;/h3&gt;
+  &lt;h4&gt;Heading 4: HTML5 & Semantic Web&lt;/h4&gt;
+  &lt;h5&gt;Heading 5: Sub-topic Configuration&lt;/h5&gt;
+  &lt;h6&gt;Heading 6: Micro Footnote Tag&lt;/h6&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <span class="nav-btn" style="opacity:0.4; cursor:not-allowed;">&larr; Previous</span>
+      <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+      <a href="html-02.html" class="nav-btn primary">Next Exp (02) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

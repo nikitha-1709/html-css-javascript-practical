@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Exp 10 - Write a program to reverse a number</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge js">JavaScript Experiment 10 of 67</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Write a program to reverse a number</h1>
+      <p class="lab-desc"><strong>Description:</strong> Reverses the digits of an integer mathematically using division and modulo.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <div>
+  <div class="control-group">
+    <input type="number" id="revInput" class="input-field" value="987654" placeholder="Enter integer">
+    <button class="btn" onclick="reverseNum()">Reverse Number</button>
+  </div>
+  <div id="output10" class="result-box">Reversed output will show here.</div>
+</div>
+<script>
+function reverseNum() {
+  let n = parseInt(document.getElementById('revInput').value);
+  let original = n;
+  let rev = 0;
+  let sign = n < 0 ? -1 : 1;
+  n = Math.abs(n);
+  while (n > 0) {
+    rev = rev * 10 + (n % 10);
+    n = Math.floor(n / 10);
+  }
+  rev *= sign;
+  document.getElementById('output10').innerText = `Original: ${original} => Reversed: ${rev}`;
+}
+</script>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>js-10.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">function reverseNumber(n) {
+  let rev = 0;
+  let num = Math.abs(n);
+  while (num &gt; 0) {
+    rev = rev * 10 + (num % 10);
+    num = Math.floor(num / 10);
+  }
+  return n &lt; 0 ? -rev : rev;
+}</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="js-09.html" class="nav-btn">&larr; Previous Exp (09)</a>
+      <a href="index.html" class="nav-btn">Back to JavaScript Programs</a>
+      <a href="js-11.html" class="nav-btn primary">Next Exp (11) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

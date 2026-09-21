@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exp 06 - Create a webpage using different width, height, and sizing properties</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge css">CSS Experiment 06 of 75</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create a webpage using different width, height, and sizing properties</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates fixed dimensions, percentages, max-width, min-height, viewport units (vw, vh), and box-sizing.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <div style="display:flex; flex-direction:column; gap:12px;">
+  <div style="width:100%; max-width:500px; background:#dbeafe; padding:12px; border:1px solid #bfdbfe; border-radius:6px; color:#1e40af; font-size:13px;">
+    <strong>Fluid Box:</strong> width: 100%; max-width: 500px (Resizes cleanly on smaller screens)
+  </div>
+  <div style="width:50%; min-height:80px; background:#dcfce7; padding:12px; border:1px solid #bbf7d0; border-radius:6px; color:#166534; font-size:13px;">
+    <strong>Percentage Width:</strong> width: 50%; min-height: 80px;
+  </div>
+  <div style="width:200px; height:60px; background:#f3e8ff; padding:12px; border:1px solid #e9d5ff; border-radius:6px; color:#6b21a8; font-size:13px;">
+    <strong>Fixed Dimensions:</strong> 200px &times; 60px
+  </div>
+</div>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>css-06.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">.responsive-container {
+  width: 100%;
+  max-width: 960px;
+  min-height: 200px;
+  box-sizing: border-box;
+}</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="css-05.html" class="nav-btn">&larr; Previous Exp (05)</a>
+      <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+      <a href="css-07.html" class="nav-btn primary">Next Exp (07) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Exp 08 - Create an HTML page demonstrating semantic elements such as <header>, <nav>, <section>, <article>, and <footer></title>
+  <link rel="stylesheet" href="../assets/common.css">
+  <style>
+    /* Scoped Experiment Specific Styles */
+    .demo-wrapper {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab-container">
+    <!-- Top Navigation -->
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge html">HTML Experiment 08 of 15</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create an HTML page demonstrating semantic elements such as <header>, <nav>, <section>, <article>, and <footer></h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates modern HTML5 semantic structure for enhanced accessibility, SEO, and document architecture.</p>
+    </header>
+
+    <!-- Working Implementation & Output Card -->
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-wrapper">
+        
+<div style="border:2px dashed #94a3b8; border-radius:8px; overflow:hidden; background:#fff;">
+  <header style="background:#2563eb; color:#fff; padding:16px 20px;">
+    <h2 style="font-size:20px; margin:0;">&lt;header&gt; University Computer Center</h2>
+    <p style="font-size:13px; opacity:0.85;">Website banner and principal branding</p>
+  </header>
+  <nav style="background:#1e293b; color:#fff; padding:10px 20px; display:flex; gap:16px; font-size:14px;">
+    <span>&lt;nav&gt; &rarr;</span>
+    <a href="#" style="color:#60a5fa; text-decoration:none;">Academics</a>
+    <a href="#" style="color:#60a5fa; text-decoration:none;">Laboratories</a>
+    <a href="#" style="color:#60a5fa; text-decoration:none;">Syllabus</a>
+  </nav>
+  <div style="display:flex; flex-wrap:wrap; gap:16px; padding:20px;">
+    <section style="flex:2; min-width:240px; background:#f8fafc; border:1px solid #e2e8f0; padding:16px; border-radius:6px;">
+      <h3 style="color:#0f172a; font-size:16px; margin-bottom:8px;">&lt;section&gt; Laboratory Curriculum</h3>
+      <article style="background:#fff; border:1px solid #cbd5e1; padding:12px; border-radius:4px; margin-bottom:10px;">
+        <h4 style="font-size:14px; color:#2563eb;">&lt;article&gt; Experiment 8: Semantic Web</h4>
+        <p style="font-size:13px; color:#64748b;">Semantic tags clearly communicate their purpose to both browser engines and screen readers.</p>
+      </article>
+      <article style="background:#fff; border:1px solid #cbd5e1; padding:12px; border-radius:4px;">
+        <h4 style="font-size:14px; color:#2563eb;">&lt;article&gt; Accessibility Guidelines</h4>
+        <p style="font-size:13px; color:#64748b;">Using semantic elements reduces accessibility barriers and aids assistive tech.</p>
+      </article>
+    </section>
+    <aside style="flex:1; min-width:180px; background:#f1f5f9; border:1px solid #e2e8f0; padding:16px; border-radius:6px;">
+      <h3 style="font-size:15px; color:#0f172a; margin-bottom:8px;">&lt;aside&gt; Notice Board</h3>
+      <p style="font-size:12px; color:#64748b;">Practical exam submissions close by end of week.</p>
+    </aside>
+  </div>
+  <footer style="background:#1e293b; color:#94a3b8; padding:12px 20px; font-size:13px; text-align:center;">
+    &lt;footer&gt; &copy; 2026 Department of Computer Science. All Rights Reserved.
+  </footer>
+</div>
+
+      </div>
+    </main>
+
+    <!-- Source Code Card -->
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>html-08.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;University Portal&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#courses"&gt;Courses&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Department News&lt;/h2&gt;
+      &lt;article&gt;
+        &lt;h3&gt;Upcoming Hackathon&lt;/h3&gt;
+        &lt;p&gt;Registration opens this Monday.&lt;/p&gt;
+      &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;aside&gt;
+      &lt;h3&gt;Quick Links&lt;/h3&gt;
+    &lt;/aside&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2026 Academic Institute&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a href="html-07.html" class="nav-btn">&larr; Previous Exp (07)</a>
+      <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+      <a href="html-09.html" class="nav-btn primary">Next Exp (09) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

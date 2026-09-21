@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exp 03 - Demonstrate CSS colors, backgrounds, and borders</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge css">CSS Experiment 03 of 75</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Demonstrate CSS colors, backgrounds, and borders</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates hex, rgb, rgba, hsl color formats, background colors, patterns, and border styles.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px, 1fr)); gap:14px;">
+  <div style="background:#fee2e2; border:2px solid #ef4444; border-radius:8px; padding:16px; text-align:center;">
+    <strong style="color:#b91c1c;">Hex & Solid</strong>
+    <p style="font-size:12px; color:#7f1d1d; margin-top:4px;">#fee2e2 / #ef4444</p>
+  </div>
+  <div style="background:rgba(37, 99, 235, 0.1); border:2px dashed #2563eb; border-radius:8px; padding:16px; text-align:center;">
+    <strong style="color:#1d4ed8;">RGBA & Dashed</strong>
+    <p style="font-size:12px; color:#1e40af; margin-top:4px;">rgba(37, 99, 235, 0.1)</p>
+  </div>
+  <div style="background:hsl(142, 76%, 90%); border:2px dotted #16a34a; border-radius:8px; padding:16px; text-align:center;">
+    <strong style="color:#15803d;">HSL & Dotted</strong>
+    <p style="font-size:12px; color:#166534; margin-top:4px;">hsl(142, 76%, 90%)</p>
+  </div>
+  <div style="background:#fef3c7; border:4px double #d97706; border-radius:8px; padding:16px; text-align:center;">
+    <strong style="color:#b45309;">Double Border</strong>
+    <p style="font-size:12px; color:#92400e; margin-top:4px;">4px double #d97706</p>
+  </div>
+</div>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>css-03.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">.box-hex { background-color: #fee2e2; border: 2px solid #ef4444; }
+.box-rgba { background-color: rgba(37, 99, 235, 0.1); border: 2px dashed #2563eb; }
+.box-hsl { background-color: hsl(142, 76%, 90%); border: 2px dotted #16a34a; }</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="css-02.html" class="nav-btn">&larr; Previous Exp (02)</a>
+      <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+      <a href="css-04.html" class="nav-btn primary">Next Exp (04) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

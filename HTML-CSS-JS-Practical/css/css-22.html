@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exp 22 - Create a login page using HTML and CSS</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge css">CSS Experiment 22 of 75</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create a login page using HTML and CSS</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates an authenticated login portal layout with styled inputs, 'Remember Me' checkbox, and primary submit action.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        <div style="background:#fff; border:1px solid #cbd5e1; border-radius:8px; padding:24px; max-width:360px; margin:0 auto; box-shadow:0 4px 6px rgba(0,0,0,0.05);">
+  <h3 style="margin-bottom:16px; text-align:center; color:#1e293b;">Student Portal Login</h3>
+  <input type="text" placeholder="Roll Number" class="input-field" style="width:100%; margin-bottom:12px;">
+  <input type="password" placeholder="Password" class="input-field" style="width:100%; margin-bottom:14px;">
+  <div style="display:flex; justify-content:space-between; font-size:12px; margin-bottom:16px;">
+    <label><input type="checkbox"> Remember me</label>
+    <a href="#" style="color:#2563eb; text-decoration:none;">Forgot password?</a>
+  </div>
+  <button class="btn" style="width:100%;">Sign In</button>
+</div>
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>css-22.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">.login-container { max-width: 360px; margin: auto; padding: 24px; border: 1px solid #cbd5e1; }</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="css-21.html" class="nav-btn">&larr; Previous Exp (21)</a>
+      <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+      <a href="css-23.html" class="nav-btn primary">Next Exp (23) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

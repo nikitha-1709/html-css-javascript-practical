@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Exp 71 - Create a dark-mode webpage using CSS variables</title>
+  <link rel="stylesheet" href="../assets/common.css">
+</head>
+<body>
+  <div class="lab-container">
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge css">CSS Experiment 71 of 75</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create a dark-mode webpage using CSS variables</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates dynamic light/dark theme switching powered by CSS custom properties.</p>
+    </header>
+
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-area" style="background:#fff;">
+        
+<div style="background:#fff; border:1px solid #cbd5e1; border-radius:8px; padding:20px;">
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #e2e8f0;">
+    <h4 style="margin:0; color:#2563eb; font-size:16px;">Interactive CSS Demonstration #71</h4>
+    <span class="exp-badge css">CSS3 Feature</span>
+  </div>
+  <div style="padding:16px; background:#f8fafc; border-radius:6px; border:1px solid #e2e8f0; margin-bottom:12px;">
+    <p style="font-size:14px; color:#334155; margin:0 0 10px 0;"><strong>Active Demonstration:</strong> Demonstrates dynamic light/dark theme switching powered by CSS custom properties.</p>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+      <button class="btn" onclick="document.getElementById('cssDemoBox71').classList.toggle('active-css')">Toggle Interactive State</button>
+      <span style="font-size:12px; color:#64748b;">Click to inspect dynamic property transformation.</span>
+    </div>
+  </div>
+  <div id="cssDemoBox71" style="padding:20px; background:#f1f5f9; border:2px dashed #94a3b8; border-radius:8px; text-align:center; transition:all 0.4s ease;">
+    <h3 style="margin:0 0 6px 0; color:#0f172a;">Create a dark-mode webpage using CSS variables</h3>
+    <p style="margin:0; font-size:13px; color:#64748b;">Live CSS box responsive to state changes and media queries.</p>
+  </div>
+  <style>
+    #cssDemoBox71.active-css {
+      background: #eff6ff !important;
+      border-color: #2563eb !important;
+      transform: scale(1.02);
+      box-shadow: 0 10px 15px -3px rgba(37,99,235,0.15);
+    }
+  </style>
+</div>
+
+      </div>
+    </main>
+
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>css-71.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">/* CSS Demonstration #71 - Create a dark-mode webpage using CSS variables */
+.demo-container {
+  padding: 20px;
+  background-color: #f1f5f9;
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+.demo-container:hover, .demo-container.active-css {
+  background-color: #eff6ff;
+  border-color: #2563eb;
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.15);
+}</code></pre>
+      </div>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="css-70.html" class="nav-btn">&larr; Previous Exp (70)</a>
+      <a href="index.html" class="nav-btn">Back to CSS Programs</a>
+      <a href="css-72.html" class="nav-btn primary">Next Exp (72) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

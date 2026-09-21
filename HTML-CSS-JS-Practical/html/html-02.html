@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Exp 02 - Create an HTML page containing ordered, unordered, and description lists</title>
+  <link rel="stylesheet" href="../assets/common.css">
+  <style>
+    /* Scoped Experiment Specific Styles */
+    .demo-wrapper {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab-container">
+    <!-- Top Navigation -->
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge html">HTML Experiment 02 of 15</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create an HTML page containing ordered, unordered, and description lists</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates ordered lists (<ol>), unordered lists (<ul>), nested lists, and description lists (<dl>, <dt>, <dd>).</p>
+    </header>
+
+    <!-- Working Implementation & Output Card -->
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-wrapper">
+        
+<div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:20px;">
+  <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+    <h3 style="margin-bottom:10px; color:#2563eb;">1. Ordered List (&lt;ol&gt;)</h3>
+    <ol style="padding-left:24px; color:#334155;">
+      <li>HTML Basics</li>
+      <li>CSS Layouts</li>
+      <li>JavaScript Programming</li>
+      <li>Backend Integration</li>
+    </ol>
+  </div>
+  <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+    <h3 style="margin-bottom:10px; color:#059669;">2. Unordered List (&lt;ul&gt;)</h3>
+    <ul style="padding-left:24px; color:#334155;">
+      <li>Visual Studio Code</li>
+      <li>Google Chrome DevTools</li>
+      <li>Git & GitHub</li>
+      <li>Terminal / Shell</li>
+    </ul>
+  </div>
+  <div style="background:#f8fafc; padding:16px; border-radius:8px; border:1px solid #e2e8f0;">
+    <h3 style="margin-bottom:10px; color:#7c3aed;">3. Description List (&lt;dl&gt;)</h3>
+    <dl style="color:#334155;">
+      <dt style="font-weight:bold; color:#0f172a;">HTML</dt>
+      <dd style="margin-left:14px; margin-bottom:8px; color:#64748b;">HyperText Markup Language</dd>
+      <dt style="font-weight:bold; color:#0f172a;">CSS</dt>
+      <dd style="margin-left:14px; margin-bottom:8px; color:#64748b;">Cascading Style Sheets</dd>
+      <dt style="font-weight:bold; color:#0f172a;">JS</dt>
+      <dd style="margin-left:14px; color:#64748b;">JavaScript Programming Language</dd>
+    </dl>
+  </div>
+</div>
+
+      </div>
+    </main>
+
+    <!-- Source Code Card -->
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>html-02.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">&lt;!-- Ordered List --&gt;
+&lt;h3&gt;Computer Science Curriculum&lt;/h3&gt;
+&lt;ol type="1"&gt;
+  &lt;li&gt;Data Structures&lt;/li&gt;
+  &lt;li&gt;Operating Systems&lt;/li&gt;
+  &lt;li&gt;Web Technologies&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Unordered List --&gt;
+&lt;h3&gt;Web Technologies&lt;/h3&gt;
+&lt;ul type="disc"&gt;
+  &lt;li&gt;HTML5&lt;/li&gt;
+  &lt;li&gt;CSS3&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- Description List --&gt;
+&lt;h3&gt;Key Definitions&lt;/h3&gt;
+&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a href="html-01.html" class="nav-btn">&larr; Previous Exp (01)</a>
+      <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+      <a href="html-03.html" class="nav-btn primary">Next Exp (03) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>

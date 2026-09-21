@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Exp 10 - Create a college timetable using an HTML table</title>
+  <link rel="stylesheet" href="../assets/common.css">
+  <style>
+    /* Scoped Experiment Specific Styles */
+    .demo-wrapper {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="lab-container">
+    <!-- Top Navigation -->
+    <header class="lab-header">
+      <div class="lab-nav">
+        <span class="exp-badge html">HTML Experiment 10 of 15</span>
+        <div class="nav-links">
+          <a href="../index.html" class="nav-btn">&larr; Home</a>
+          <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+        </div>
+      </div>
+      <h1 class="lab-title">Create a college timetable using an HTML table</h1>
+      <p class="lab-desc"><strong>Description:</strong> Demonstrates structuring a real-world multi-period weekly timetable with table headers, alternating periods, recess breaks, and lab slots.</p>
+    </header>
+
+    <!-- Working Implementation & Output Card -->
+    <main class="lab-card">
+      <h2 class="card-title">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+        Working Implementation & Visible Output
+      </h2>
+      <div class="demo-wrapper">
+        
+<div style="overflow-x:auto;">
+  <table style="width:100%; border-collapse:collapse; text-align:center; font-size:13px;">
+    <thead>
+      <tr style="background:#1e293b; color:#fff;">
+        <th style="padding:10px; border:1px solid #cbd5e1;">Day / Time</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">09:00 - 10:00</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">10:00 - 11:00</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">11:00 - 11:15</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">11:15 - 12:15</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">12:15 - 01:15</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">01:15 - 02:00</th>
+        <th style="padding:10px; border:1px solid #cbd5e1;">02:00 - 04:00</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th style="background:#f1f5f9; padding:8px; border:1px solid #cbd5e1;">Monday</th>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e0f2fe;">Data Structures</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef3c7;">Computer Networks</td>
+        <td rowspan="5" style="background:#fee2e2; color:#991b1b; font-weight:bold; padding:8px; border:1px solid #cbd5e1; writing-mode:vertical-rl; transform:rotate(180deg);">TEA BREAK</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#dcfce7;">Discrete Math</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#ede9fe;">Software Engg</td>
+        <td rowspan="5" style="background:#fef9c3; color:#854d0e; font-weight:bold; padding:8px; border:1px solid #cbd5e1; writing-mode:vertical-rl; transform:rotate(180deg);">LUNCH BREAK</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fce7f3; font-weight:600;">Web Tech Lab (Group A)</td>
+      </tr>
+      <tr>
+        <th style="background:#f1f5f9; padding:8px; border:1px solid #cbd5e1;">Tuesday</th>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#ede9fe;">Software Engg</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e0f2fe;">Data Structures</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef3c7;">Computer Networks</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#dcfce7;">Discrete Math</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fce7f3; font-weight:600;">Data Structures Lab</td>
+      </tr>
+      <tr>
+        <th style="background:#f1f5f9; padding:8px; border:1px solid #cbd5e1;">Wednesday</th>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#dcfce7;">Discrete Math</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#ede9fe;">Software Engg</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e0f2fe;">Data Structures</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef3c7;">Computer Networks</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e2e8f0;">Library / Seminar</td>
+      </tr>
+      <tr>
+        <th style="background:#f1f5f9; padding:8px; border:1px solid #cbd5e1;">Thursday</th>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef3c7;">Computer Networks</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#dcfce7;">Discrete Math</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#ede9fe;">Software Engg</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e0f2fe;">Data Structures</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fce7f3; font-weight:600;">Web Tech Lab (Group B)</td>
+      </tr>
+      <tr>
+        <th style="background:#f1f5f9; padding:8px; border:1px solid #cbd5e1;">Friday</th>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#e0f2fe;">Data Structures</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef3c7;">Computer Networks</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#ede9fe;">Software Engg</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#dcfce7;">Discrete Math</td>
+        <td style="padding:8px; border:1px solid #cbd5e1; background:#fef08a;">Technical Seminar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+      </div>
+    </main>
+
+    <!-- Source Code Card -->
+    <section class="lab-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+        <h2 class="card-title" style="margin-bottom:0; border-bottom:none; padding-bottom:0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Source Code
+        </h2>
+        <button class="copy-btn" onclick="copySourceCode()">Copy Code</button>
+      </div>
+      <div class="code-container">
+        <div class="code-header">
+          <span>html-10.html</span>
+        </div>
+        <pre><code id="sourceCodeBlock">&lt;table border="1" cellspacing="0" cellpadding="8"&gt;
+  &lt;caption&gt;Computer Science - Semester IV Timetable&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Day&lt;/th&gt;
+    &lt;th&gt;9-10 AM&lt;/th&gt;
+    &lt;th&gt;10-11 AM&lt;/th&gt;
+    &lt;th&gt;11-12 PM&lt;/th&gt;
+    &lt;th&gt;12-1 PM&lt;/th&gt;
+    &lt;th&gt;1-2 PM&lt;/th&gt;
+    &lt;th&gt;2-4 PM&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Monday&lt;/td&gt;
+    &lt;td&gt;Data Structures&lt;/td&gt;
+    &lt;td&gt;Networks&lt;/td&gt;
+    &lt;td rowspan="5"&gt;LUNCH&lt;/td&gt;
+    &lt;td&gt;Mathematics&lt;/td&gt;
+    &lt;td&gt;Software Engg&lt;/td&gt;
+    &lt;td&gt;Web Lab&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Tuesday&lt;/td&gt;
+    &lt;td&gt;Software Engg&lt;/td&gt;
+    &lt;td&gt;Data Structures&lt;/td&gt;
+    &lt;td&gt;Networks&lt;/td&gt;
+    &lt;td&gt;Mathematics&lt;/td&gt;
+    &lt;td&gt;DS Lab&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav">
+      <a href="html-09.html" class="nav-btn">&larr; Previous Exp (09)</a>
+      <a href="index.html" class="nav-btn">Back to HTML Programs</a>
+      <a href="html-11.html" class="nav-btn primary">Next Exp (11) &rarr;</a>
+    </nav>
+  </div>
+
+  <script>
+    function copySourceCode() {
+      const codeText = document.getElementById('sourceCodeBlock').innerText;
+      navigator.clipboard.writeText(codeText).then(() => {
+        alert('Source code copied to clipboard!');
+      }).catch(() => {
+        alert('Failed to copy code.');
+      });
+    }
+  </script>
+</body>
+</html>
