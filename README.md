@@ -56,16 +56,7 @@ HTML-CSS-JS-Practical/
 - HTML5
 - CSS3
 - JavaScript
-
-## How to Run
-
-1. Open the project folder.
-2. Open `index.html` in a web browser.
-3. Select HTML, CSS or JavaScript Programs.
-4. Select an experiment to open and run it.
-
-No installation is required for the basic programs. Some browser/API demonstrations may depend on normal browser permissions or internet access.
-
+ 
 ## Navigation
 
 Each category has its own index page. Individual programs also contain navigation links to return to the JavaScript/HTML/CSS program list or the main dashboard.
